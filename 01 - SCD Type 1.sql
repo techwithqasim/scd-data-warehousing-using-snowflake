@@ -46,7 +46,7 @@ CREATE OR REPLACE TABLE customer_raw (
 -- Create a stage for external data (e.g., CSV data from S3)
 CREATE OR REPLACE STAGE customer_ext_stage
     URL = 's3://scd-data-warehousing/'
-    CREDENTIALS = (aws_key_id = 'AKIAYS2NQF3Z6X3GIXDB', aws_secret_key = 'ThB4dUxNPbqr8V4JOwQ40V1B/6G81M4aVMAgYMCM')
+    CREDENTIALS = (aws_key_id = '<aws_key_id>', aws_secret_key = '<aws_secret_key>')
     FILE_FORMAT = (TYPE = 'CSV', FIELD_DELIMITER=',', SKIP_HEADER=1);
 
 SHOW STAGES;
